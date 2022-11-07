@@ -2,10 +2,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import brandLogo from '../../assets/icons/logo.svg';
 
 const Navbar = () => {
   const router = useLocation();
-  console.log("LOCATION", router.pathname);
   return (
     <header className="header_area">
       <div className="main_menu">
@@ -15,7 +15,7 @@ const Navbar = () => {
         >
           <div className="container box_1620">
             <Link className="navbar-brand logo_h brand-name" to="/">
-              AlternativeUI
+              <img src={brandLogo} alt='brand logo'/>
             </Link>
             <button
               className="navbar-toggler"
@@ -38,72 +38,42 @@ const Navbar = () => {
               <ul className="nav navbar-nav menu_nav justify-content-end">
                 <li
                   className={`${
-                    router.pathname === "/" ? "nav-item active" : "nav-item"
-                  }`}
-                >
-                  <Link className="nav-link" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li
-                  className={`${
                     router.pathname === "/portfolio"
                       ? "nav-item active"
                       : "nav-item"
                   }`}
                 >
-                  <Link className="nav-link" to="/portfolio">
-                    Portfolio
+                  <Link className="nav-link" to="/products">
+                    Products
+                  </Link>
+                </li>
+                <li
+                  className={`${
+                    router.pathname === "/services"
+                      ? "nav-item active"
+                      : "nav-item"
+                  }`}
+                >
+                  <Link className="nav-link" to="/products">
+                    Services
                   </Link>
                 </li>
 
                 <li
                   className={`${
-                    router.pathname === "/services"
-                      ? "nav-item active submenu dropdown"
-                      : "nav-item submenu dropdown"
+                    router.pathname === "/contact"
+                      ? "nav-item active"
+                      : "nav-item"
                   }`}
                 >
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link dropdown_nav-link"
-                        to="/services/frontend"
-                      >
-                        Frontend Development
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link dropdown_nav-link"
-                        to="/services/design"
-                      >
-                        UI/UX Designs
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={`${
-                    router.pathname === "/contact" ? "nav-item active" : "nav-item"
-                  }`}>
-                  <Link className="nav-link" to="/contact-us">
-                    Contact
+                  <Link className="nav-link" to="/about-us">
+                    About
                   </Link>
                 </li>
               </ul>
               <ul className="navbar-right">
                 <li className="nav-item">
-                  <button className="button button-header bg">Sign up</button>
+                  <button className="button button-header bg">Login</button>
                 </li>
               </ul>
             </div>

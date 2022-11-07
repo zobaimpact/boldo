@@ -1,13 +1,28 @@
-/* eslint-disable import/no-anonymous-default-export */
-import octarmartImage from "./app/assets/images/page-group-2.png";
-export default [
+import image from "./app/assets/images/profile.svg";
+import manager from "./app/assets/images/managers.svg";
+
+export const users = [
+  { name: "Michael Scott", profile: image, role: "General Manager" },
+  { name: "Michael Scott", profile: image, role: "General Manager" },
+  { name: "Michael Scott", profile: image, role: "General Manager" },
+];
+export const managers = [
+  { name: " Dwight Schrute", profile: manager, role: "General Manager" },
+  { name: "Dwight Schrute", profile: manager, role: "General Manager" },
+  { name: "Pam Beetsley ", profile: manager, role: "General Manager" },
+  { name: "Pam Beetsley ", profile: manager, role: "General Manager" },
+];
+export const mission = [
   {
-    title: "Octamart",
-    image: octarmartImage,
-    id: "7645684541406523",
-    rating: 4.9,
-    link: "/ihuytrrd/kljhgcrcfgh",
-    description:
-      "OctaMart is a Robust Multi-Purpose React/Next.js E-commerce Template with Multi-Vendor & Single-Vendor Layouts and 160+ User Interface Features.",
+    title: "commited.",
+    text: "Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.",
+  },
+  {
+    title: "responsible.",
+    text: "Mass market iPhone buzz conversion analytics stock iteration responsive web design user experience business plan handshake. Return on investment seed round MVP backing supply chain.",
+  },
+  {
+    title: "progress.",
+    text: "Bootstrapping rockstar first mover advantage business model canvas alpha deployment launch party beta facebook metrics gamification growth hacking customer focus.",
   },
 ];
